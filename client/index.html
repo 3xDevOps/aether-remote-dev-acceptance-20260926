@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Workspace</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main>
+    <div class="brand"><span class="logo" aria-hidden="true">lw</span> little workspace</div>
+    <section class="card" id="login-panel">
+      <p class="eyebrow">YOUR SPACE, SIMPLIFIED</p>
+      <h1>Good to see you.</h1>
+      <p class="intro">Log in for a quiet place to keep your thoughts.</p>
+      <form id="login-form" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="username" placeholder="you@example.com" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <p id="login-error" class="error" role="alert"></p>
+        <button type="submit">Log in <span aria-hidden="true">→</span></button>
+      </form>
+      <aside class="demo"><strong>Try this demo</strong><p>test@example.invalid</p><p>demo-password</p></aside>
+    </section>
+    <section class="card" id="workspace-panel" hidden>
+      <div class="session-bar"><span class="eyebrow">YOU’RE SIGNED IN</span><button id="logout" class="quiet" type="button">Log out</button></div>
+      <h1 id="welcome-heading"></h1>
+      <p class="intro" id="account"></p>
+      <form id="note-form">
+        <label for="note">A note for yourself</label>
+        <textarea id="note" name="note" rows="4" maxlength="2000" placeholder="What’s on your mind?"></textarea>
+        <p class="hint">Your note stays here for this signed-in session.</p>
+        <button type="submit">Save note <span aria-hidden="true">✓</span></button>
+      </form>
+      <p id="note-status" role="status" aria-live="polite"></p>
+      <div id="saved" class="demo" hidden><strong>Saved note</strong><p id="saved-note"></p></div>
+      <p id="workspace-error" class="error" role="alert"></p>
+    </section>
+    <footer>A little space. A fresh start.</footer>
+  </main>
+</body>
+</html>
